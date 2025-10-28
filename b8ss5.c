@@ -5,7 +5,9 @@ int main(){
 	printf("Nhap vao so met khoi (m^3) nuoc tieu thu: ");
 	scanf("%f", &a);
 	
-	if(a <= 10){
+	if(a < 0){
+		printf("Nhap sai dinh dang");
+	}else if(a <= 10){
 		tongTien = a * 6000;
 	}
 	else if(a <= 20){
@@ -18,7 +20,7 @@ int main(){
 		tongTien = 10 * 6000 + 10 * 7000 + 10 * 8500 + (a - 30) * 10000;
 	}
 
-	printf("So tien phai tra la: %.0f VND", tongTien);
+	printf("\nSo tien phai tra la: %.0f VND", tongTien);
 	
 	return 0;
 }
